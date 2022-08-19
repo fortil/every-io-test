@@ -1,0 +1,22 @@
+{
+  "name": "engineering-interivew-be",
+  "version": "0.0.1",
+  "description": "interview",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/every-io/engineering-interivew-be.git"
+  },
+  "author": "william penagos <billalpeza@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/every-io/engineering-interivew-be/issues"
+  },
+  "homepage": "https://github.com/every-io/engineering-interivew-be#readme",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
