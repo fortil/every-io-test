@@ -1,4 +1,5 @@
 version: '3.8'
+name: be-test
 services:
   app:
     build: .
@@ -9,6 +10,16 @@ services:
     volumes:
       - ./:/usr/src/app/
       - /usr/src/app/node_modules
+    command: npm start
+    environment:
+      - DB_USER=root
+      - DB_HOST=postgres
+      - DB_NAME=db
+      - DB_PASSWORD=root
+      - DB_DRIVER=postgres
+      - JWT_SECRET_KEY=test_will
+      - TOKEN_HEADER_KEY=accessToken
+      - NODE_ENV=development
 
   postgres:
     image: postgres:14.1-alpine
@@ -16,7 +27,7 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root
+      - POSTGRES_DB=db
     ports:
       - "5432:5432"
     volumes:
